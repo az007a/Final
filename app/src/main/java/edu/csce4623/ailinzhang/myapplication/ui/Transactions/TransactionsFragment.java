@@ -1,4 +1,4 @@
-package edu.csce4623.ailinzhang.myapplication.ui.gallery;
+package edu.csce4623.ailinzhang.myapplication.ui.Transactions;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import edu.csce4623.ailinzhang.myapplication.R;
 
-public class GalleryFragment extends Fragment {
+public class TransactionsFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private TransactionsViewModel transactionsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        transactionsViewModel =
+                ViewModelProviders.of(this).get(TransactionsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_transactions, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        transactionsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

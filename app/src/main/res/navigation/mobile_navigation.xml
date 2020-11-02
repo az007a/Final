@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_income">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="edu.csce4623.ailinzhang.myapplication.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_income"
+        android:name="edu.csce4623.ailinzhang.myapplication.ui.IncomeAndExpenses.IncomeAndExpensesFragment"
+        android:label="@string/menu_income"
+        tools:layout="@layout/fragment_income" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="edu.csce4623.ailinzhang.myapplication.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_transactions"
+        android:name="edu.csce4623.ailinzhang.myapplication.ui.Transactions.TransactionsFragment"
+        android:label="@string/menu_transactions"
+        tools:layout="@layout/fragment_transactions" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="edu.csce4623.ailinzhang.myapplication.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_analysis"
+        android:name="edu.csce4623.ailinzhang.myapplication.ui.Analysis.AnalysisFragment"
+        android:label="@string/menu_analysis"
+        tools:layout="@layout/fragment_analysis" />
 </navigation>

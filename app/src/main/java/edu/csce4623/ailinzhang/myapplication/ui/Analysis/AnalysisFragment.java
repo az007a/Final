@@ -1,4 +1,4 @@
-package edu.csce4623.ailinzhang.myapplication.ui.home;
+package edu.csce4623.ailinzhang.myapplication.ui.Analysis;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import edu.csce4623.ailinzhang.myapplication.R;
 
-public class HomeFragment extends Fragment {
+public class AnalysisFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private AnalysisViewModel analysisViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        analysisViewModel =
+                ViewModelProviders.of(this).get(AnalysisViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_analysis, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        analysisViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

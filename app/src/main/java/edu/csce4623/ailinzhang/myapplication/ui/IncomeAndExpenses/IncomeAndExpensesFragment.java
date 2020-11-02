@@ -1,4 +1,4 @@
-package edu.csce4623.ailinzhang.myapplication.ui.slideshow;
+package edu.csce4623.ailinzhang.myapplication.ui.IncomeAndExpenses;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import edu.csce4623.ailinzhang.myapplication.R;
 
-public class SlideshowFragment extends Fragment {
+public class IncomeAndExpensesFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private IncomeAndExpensesViewModel incomeAndExpensesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        incomeAndExpensesViewModel =
+                ViewModelProviders.of(this).get(IncomeAndExpensesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_income, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
+        incomeAndExpensesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
